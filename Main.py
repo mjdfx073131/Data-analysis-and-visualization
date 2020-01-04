@@ -24,20 +24,21 @@ with open (fn, 'w') as fp:
 
 
 #read data
-df = pd.read_csv('data.csv', encoding = 'cp936')
+df = pd.read_csv('data.csv', encoding = 'UTF-8')
 df = df.dropna()
 
 #create revenue line chart and save to first.jpg
 plt.figure()
-df.plot (x = df['DATE'])
+#df.plot(kind='line',x = 'DATE', y='Sales')
+df.plot.line(x = 'DATE', rot = 45, figsize = (20,15))
 plt.savefig('first.jpg')
 
 #create monthly bar chart and save to second.jpg
 plt.figure()
-df1 = df [:]
+df1 = df[:]
 df1['month'] = df1['DATE'].map(lambda x: x[:x.rindex('-')])
 df1 = df1.groupby (by = 'month', as_index = False).sum()
-df1.plot(x=df1['month'], kind = 'bar')
+df1.plot(x='month', kind = 'bar', figsize = (20,10))
 plt.savefig('second.jpg')
 
 #find the month with the max increasing rate, write to maxMonth.txt file
