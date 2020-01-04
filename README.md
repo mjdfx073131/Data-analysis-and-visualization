@@ -12,7 +12,7 @@ if (ur computer has python3) {</br>
 } </br>
 # How to run .py
 1) go to terminal
-2) cd Desktop/Data-analysis-visualization
+2) cd Desktop/Data-analysis-and-visualization
 3) python3 Main.py (if it's python2, then just python Main.py)
 # What Main.py do
 1) use pandas to read data.csv, create Dataframe object, and ignore all the missing value
