@@ -7,11 +7,11 @@ fn = 'data.csv'
 with open (fn, 'w') as fp:
     #create csv file
     wr = csv.writer(fp)
-    #create the title
+    #create the row name
     wr.writerow(['Date', 'Sales'])
-    #create the vitual data
+    #create the virtual data
     startDate = datetime.datetime(2020, 1, 1)
-    #create 365 vitual data
+    #create 365 virtual data
     for i in range (365):
         #create a single data, write to csv file
         amount = 300 + i*5 + random.randrange(100)
