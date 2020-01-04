@@ -1,6 +1,8 @@
 import csv
 import random  
 import datetime
+import pandas as pd
+import matplotlib.pyplot as plt
 
 fn = 'data.csv'
 
@@ -8,7 +10,7 @@ with open (fn, 'w') as fp:
     #create csv file
     wr = csv.writer(fp)
     #create the row name
-    wr.writerow(['Date', 'Sales'])
+    wr.writerow(['DATE', 'Sales'])
     #create the virtual data
     startDate = datetime.datetime(2020, 1, 1)
     #create 365 virtual data
@@ -20,8 +22,6 @@ with open (fn, 'w') as fp:
         startDate = startDate + datetime.timedelta(days=1)
 
 
-import pandas as pd
-import matplotlib.pyplot as plt
 
 #read data
 df = pd.read_csv('data.csv', encoding = 'cp936')
