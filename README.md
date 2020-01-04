@@ -1,6 +1,6 @@
 # Data-analysis-and-visualization
 Python+pandas+matplotlib practice
-# If you have not install pandas and matplotlib, then do the following
+# If you have not installed pandas and matplotlib, then do the following
 if (ur computer has python3) {</br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. open terminal</br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. pip3 install pandas</br>
